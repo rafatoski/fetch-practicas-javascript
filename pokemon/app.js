@@ -22,3 +22,9 @@ async function buscarPokemon() {
         infoDiv.innerHTML = `<p style="color:red;">No se encontró el Pokémon 😢</p>`;
     }
 }
+
+document.getElementById('pokemonInput').addEventListener('keypress' , function (e) {
+    if (e.key === 'Enter') {
+        buscarPokemon();
+    }
+});
