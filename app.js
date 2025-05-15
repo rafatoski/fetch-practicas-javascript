@@ -9,7 +9,7 @@ async function buscarPokemon() {
 
         const data = await res.json();
 
-        const tipos = data.types.map(t => t.types.name).join(', ');
+        const tipos = data.types.map(t => t.type.name).join(', ');
 
         infoDiv.innerHTML = `
       <h2>${data.name.toUpperCase()}</h2>
